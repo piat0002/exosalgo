@@ -53,7 +53,7 @@ function calculateFromString(str){
     for (let i = 0; i < tableauexpression.length; i++) {
         if(tableauexpression[i] == '/'){
             Mtableau.pop()
-            Mtableau.push(tableauexpression[i-1] * tableauexpression[i+1])
+            Mtableau.push(tableauexpression[i-1] / tableauexpression[i+1])
             //evite un bug car la boucle va repasser
             i++
         }else{
@@ -67,7 +67,7 @@ function calculateFromString(str){
     for (let i = 0; i < tableauexpression.length; i++) {
         if(tableauexpression[i] == '+'){
             Mtableau.pop()
-            Mtableau.push(tableauexpression[i-1] * tableauexpression[i+1])
+            Mtableau.push(tableauexpression[i-1] + tableauexpression[i+1])
             //evite un bug car la boucle va repasser
             i++
         }else{
@@ -81,7 +81,7 @@ function calculateFromString(str){
     for (let i = 0; i < tableauexpression.length; i++) {
         if(tableauexpression[i] == '-'){
             Mtableau.pop()
-            Mtableau.push(tableauexpression[i-1] * tableauexpression[i+1])
+            Mtableau.push(tableauexpression[i-1] - tableauexpression[i+1])
             //evite un bug car la boucle va repasser
             i++
         }else{

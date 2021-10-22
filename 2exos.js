@@ -47,7 +47,7 @@ function calculateFromString(str){
         
     }
     tableauexpression = Mtableau
-    //console.log(Mtableau)
+    console.log(Mtableau)
     
     Mtableau = []
     for (let i = 0; i < tableauexpression.length; i++) {
@@ -67,7 +67,7 @@ function calculateFromString(str){
     for (let i = 0; i < tableauexpression.length; i++) {
         if(tableauexpression[i] == '+'){
             Mtableau.pop()
-            Mtableau.push(tableauexpression[i-1] + tableauexpression[i+1])
+            Mtableau.push(tableauexpression[i-1] + parseInt(tableauexpression[i+1]))
             //evite un bug car la boucle va repasser
             i++
         }else{
@@ -96,3 +96,4 @@ function calculateFromString(str){
 str = "21+5*2*81-15/2*4";
 calculateFromString0(str)
 console.log(calculateFromString(str))
+console.log(calculateFromString('2*2+1'))
